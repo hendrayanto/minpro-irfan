@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 
 import PropTypes from 'prop-types'
@@ -17,7 +19,7 @@ const OfficeAddress = (props) => {
             <div className="office-address-container1">
               <img
                 alt={props.location1ImageAlt}
-                src={props.location1ImageSrc}
+                src={`/images/c11.jpg`}
                 className="office-address-image thq-img-ratio-16-9"
               />
               <h3 className="office-address-text2 thq-heading-3">
@@ -29,7 +31,7 @@ const OfficeAddress = (props) => {
             <div className="office-address-container3">
               <img
                 alt={props.location2ImageAlt}
-                src={props.location2ImageSrc}
+                src={`/images/c12.jpg`}
                 className="office-address-image1 thq-img-ratio-16-9"
               />
               <h3 className="office-address-text4 thq-heading-3">
@@ -147,12 +149,12 @@ OfficeAddress.defaultProps = {
   location2ImageAlt: 'image2Alt',
   location1Description:
     'Bucharest gets grooving with a concert by Moonlight Breakfast. Get ready for an electrifying night! Get  your ticket',
-  location2ImageSrc: '/image/c15-1400w.jpg',
+  location2ImageSrc: '/images/c11.jpg',
   location2: 'New York',
   location1ImageAlt: 'image1Alt',
   location1: 'Bucharest',
   heading1: 'Office :',
-  location1ImageSrc: '/image/c13-1400w.jpeg',
+  location1ImageSrc: '/images/c12.jpg',
   location2Description:
     "New York City's concert scene is always buzzing! Search on Bandsintown, Ticketmaster, or Songkick to find the perfect show for you.",
 }

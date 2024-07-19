@@ -2,7 +2,7 @@
 
 import React from 'react'
 import Head from 'next/head'
-import Navbar from '../components/Navbar'
+
 import Hero from '../components/Hero'
 import Features1 from '../components/Features1'
 import FeatureExplore from '../components/Feature-explore'
@@ -21,7 +21,7 @@ const Home = (props) => {
           <title>Musical Party</title>
           <meta property="og:title" content="Musical Party" />
         </Head>
-        <Navbar></Navbar>
+        
         <Hero image6Src="/image/c8-1500w.jpg"></Hero>
         <Features1></Features1>
         <FeatureExplore></FeatureExplore>

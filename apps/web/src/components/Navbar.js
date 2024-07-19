@@ -12,7 +12,7 @@ const Navbar = (props) => {
         <header data-thq="thq-navbar" className="navbar-navbar-interactive">
           <img
             alt={props.logoAlt}
-            src={props.logoSrc}
+            src={`/images/logo.png`}
             className="navbar-image1"
           />
           <h1 className="navbar-text">{props.text}</h1>

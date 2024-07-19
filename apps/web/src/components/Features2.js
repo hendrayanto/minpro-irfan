@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+"use client";
 
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 const Features2 = (props) => {
   const [activeTab, setActiveTab] = useState(0)
@@ -40,6 +42,11 @@ const Features2 = (props) => {
                   {props.descriptionCreateEvents}
                 </span>
               </div>
+              <div className="create-your-own-events">
+        <Link to="/create-event" className="create-events-link">
+          Create Your Own Events
+        </Link>
+      </div>
             </div>
             <div
               onClick={() => setActiveTab(2)}
@@ -62,21 +69,21 @@ const Features2 = (props) => {
             {activeTab === 0 && (
               <img
                 alt={props.feature1ImgAlt}
-                src={props.feature1ImgSrc}
+                src={`/images/c7.jpg`}
                 className="features2-image thq-img-ratio-16-9"
               />
             )}
             {activeTab === 1 && (
               <img
                 alt={props.feature2ImgAlt}
-                src={props.feature2ImgSrc}
+                src={`/images/c9.jpg`}
                 className="features2-image1 thq-img-ratio-16-9"
               />
             )}
             {activeTab === 2 && (
               <img
                 alt={props.feature3ImgAlt}
-                src={props.feature3ImgSrc}
+                src={`/images/c10.jpg`}
                 className="features2-image2 thq-img-ratio-16-9"
               />
             )}

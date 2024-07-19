@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react'
 
 import PropTypes from 'prop-types'
@@ -12,14 +14,14 @@ const Features1 = (props) => {
             {activeTab === 0 && (
               <img
                 alt={props.feature1ImgAlt}
-                src={props.feature1ImgSrc}
+                src={`/images/c6.jpg`}
                 className="features1-image thq-img-ratio-16-9"
               />
             )}
             {activeTab === 2 && (
               <img
-                alt={props.feature3ImgAlt}
-                src={props.feature3ImgSrc}
+                alt={props.feature2ImgAlt}
+                src={`/images/c7.jpg`}
                 className="features1-image1 thq-img-ratio-16-9"
               />
             )}

@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react'
 import PropTypes from 'prop-types'
+import Script from 'next/script';
 
 const Hero = (props) => {
   return (
@@ -16,28 +19,28 @@ const Hero = (props) => {
           <div className="hero-row-container thq-mask-image-horizontal thq-animated-group-container-horizontal">
             <div className="thq-animated-group-horizontal">
               <img
-                alt="Discover the Best Music Events"
-                src={props.image1Src}
+                alt={props.image1Alt}
+                src={`/images/c1.jpg`}
                 className="hero-placeholder-image thq-img-ratio-1-1 thq-img-scale"
               />
               <img
                 alt={props.image2Alt}
-                src={props.image2Src}
+                src={`/images/c2.jpg`}
                 className="hero-placeholder-image01 thq-img-ratio-1-1 thq-img-scale"
               />
               <img
                 alt={props.image3Alt}
-                src={props.image3Src}
+                src={`/images/c3.jpg`}
                 className="hero-placeholder-image02 thq-img-ratio-1-1 thq-img-scale"
               />
               <img
                 alt={props.image4Alt}
-                src={props.image4Src}
+                src={`/images/c4.jpg`}
                 className="hero-placeholder-image03 thq-img-ratio-1-1 thq-img-scale"
               />
               <img
                 alt={props.image5Alt}
-                src={props.image5Src}
+                src={`/images/c5.jpg`}
                 className="hero-placeholder-image04 thq-img-ratio-1-1 thq-img-scale"
               />
               <img

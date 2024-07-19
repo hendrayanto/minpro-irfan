@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from 'react'
 
 import PropTypes from 'prop-types'
@@ -197,7 +199,7 @@ Pricing.defaultProps = {
   feature2: 'Create unlimited events',
   feature4: 'Priority customer support',
   feature3: 'Exclusive VIP event invitations',
-  plan: 'Get Your Access',
+  plan: 'Buy Ticket',
   price: '$30',
   feature5: 'Monthly free gift',
 }
