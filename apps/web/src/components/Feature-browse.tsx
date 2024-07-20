@@ -1,10 +1,20 @@
 "use client";
 
 import React from 'react'
-
 import PropTypes from 'prop-types'
 
-const FeaturesBrowse = (props) => {
+interface FeaturesBrowseProps {
+  step2Title: string
+  step3Title: string
+  step3Description: string
+  step4Title: string
+  step1Title: string
+  step1Description: string
+  step2Description: string
+  step4Description: string
+}
+
+const FeaturesBrowse = (props: FeaturesBrowseProps) => {
   return (
     <>
       <div className="features-browse-container thq-section-padding">

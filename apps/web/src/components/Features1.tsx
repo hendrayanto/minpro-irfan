@@ -1,10 +1,23 @@
 "use client";
 
 import React, { useState } from 'react'
-
 import PropTypes from 'prop-types'
 
-const Features1 = (props) => {
+interface Features1Props {
+  feature2ImgAlt: string
+  upcomingEvents: string
+  feature1ImgAlt: string
+  feature1ImgSrc: string
+  feature3Title: string
+  descriptionUpcomingEvents: string
+  feature2ImgSrc: string
+  feature3ImgAlt: string
+  descriptionCreateEvents: string
+  feature3ImgSrc: string
+  feature3Description: string
+}
+
+const Features1 = (props: Features1Props) => {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <>

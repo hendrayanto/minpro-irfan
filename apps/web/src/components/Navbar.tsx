@@ -1,9 +1,29 @@
 "use client";
-
+import Link from 'next/link';
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
-const Navbar = (props) => {
+interface NavbarProps {
+  logoAlt: string
+  text: string
+  home: string
+  events: string
+  AboutUs: string
+  page1Description: string
+  page1ImageAlt: string
+  page1ImageSrc: string
+  page2Description: string
+  page2ImageAlt: string
+  page2ImageSrc: string
+  page3Description: string
+  page3ImageAlt: string
+  page3ImageSrc: string
+  page4Description: string
+  page4ImageAlt: string
+  page4ImageSrc: string
+}
+
+const Navbar = (props: NavbarProps) => {
   const [link5AccordionOpen, setLink5AccordionOpen] = useState(false)
   const [link5DropdownVisible, setLink5DropdownVisible] = useState(false)
   return (
@@ -22,9 +42,13 @@ const Navbar = (props) => {
             </button>
             <div data-thq="thq-navbar-nav" className="navbar-desktop-menu">
               <nav className="navbar-links">
-                <span className="thq-link thq-body-small">{props.home}</span>
+              <Link href="/" legacyBehavior>
+                  <a className="thq-link thq-body-small">{props.home}</a>
+              </Link>
                 <span className="thq-link thq-body-small">{props.events}</span>
-                <span className="thq-link thq-body-small">{props.aboutUs}</span>
+                <Link href="/AboutUs" legacyBehavior>
+                  <a className="thq-link thq-body-small">{props.AboutUs}</a>
+                </Link>
                 <div
                   onClick={() => setLink5DropdownVisible(!link5DropdownVisible)}
                   className="navbar-link5-dropdown-trigger"
@@ -500,22 +524,14 @@ Navbar.defaultProps = {
   page1Description: 'Page One Description',
   textinputPlaceholder: '',
   events: 'Events',
-  page3ImageSrc:
-    'https://images.unsplash.com/photo-1504166972830-f2beea45c22b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyMDk4ODA3Nnw&ixlib=rb-4.0.3&q=80&w=1080',
-  page2ImageSrc:
-    'https://images.unsplash.com/photo-1607047740534-748140984f12?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyMDk4ODA3Nnw&ixlib=rb-4.0.3&q=80&w=1080',
-  aboutUs: 'About Us',
+  AboutUs: 'About Us',
   logoSrc: '/image/logo-1400w.png',
   page4ImageAlt: 'image',
   page4Description: 'Page Four Description',
-  page1ImageSrc:
-    'https://images.unsplash.com/photo-1525268771113-32d9e9021a97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyMDk4ODA3NXw&ixlib=rb-4.0.3&q=80&w=1080',
   page3Description: 'Page Three Description',
   logoAlt: 'Music Concert Agency Logo',
   text: 'Musical Party',
   page3ImageAlt: 'image',
-  page4ImageSrc:
-    'https://images.unsplash.com/photo-1476382929176-f7b329008e17?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w5MTMyMXwwfDF8cmFuZG9tfHx8fHx8fHx8MTcyMDk4ODA3NXw&ixlib=rb-4.0.3&q=80&w=1080',
   page1ImageAlt: 'image',
   page2ImageAlt: 'image',
   page2Description: 'Page Two Description',
@@ -528,7 +544,7 @@ Navbar.propTypes = {
   events: PropTypes.string,
   page3ImageSrc: PropTypes.string,
   page2ImageSrc: PropTypes.string,
-  aboutUs: PropTypes.string,
+  AboutUs: PropTypes.string,
   logoSrc: PropTypes.string,
   page4ImageAlt: PropTypes.string,
   page4Description: PropTypes.string,

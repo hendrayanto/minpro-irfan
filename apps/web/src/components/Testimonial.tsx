@@ -1,10 +1,34 @@
 "use client";
 
 import React from 'react'
-
 import PropTypes from 'prop-types'
 
-const Testimonial = (props) => {
+interface TestimonialProps {
+  review1: string
+  author3Name: string
+  author1Alt: string
+  author3Position: string
+  author2Name: string
+  content1: string
+  author2Alt: string
+  author3Src: string
+  author4Alt: string
+  author2Position: string
+  author3Alt: string
+  review4: string
+  review2: string
+  author1Position: string
+  author2Src: string
+  heading1: string
+  author1Src: string
+  author1Name: string
+  review3: string
+  author4Src: string
+  author4Name: string
+  author4Position: string
+}
+
+const Testimonial = (props: TestimonialProps) => {
   return (
     <>
       <div className="thq-section-padding">

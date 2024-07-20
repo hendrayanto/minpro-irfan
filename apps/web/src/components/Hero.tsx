@@ -4,7 +4,28 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Script from 'next/script';
 
-const Hero = (props) => {
+interface HeroProps { 
+  image6Src: string,
+  image7Src: string,
+  image3Src: string,
+  image2Src: string,
+  image6Alt: string,
+  image8Src: string,
+  image4Src: string,
+  content1: string,
+  image1Src: string,
+  heading1: string,
+  image2Alt: string,
+  image10Src: string,
+  image4Alt: string,
+  image5Alt: string,
+  image5Src: string,
+  image9Src: string,
+  image3Alt: string,
+}
+
+
+const Hero = (props: HeroProps) => {
   return (
     <>
       <div className="hero-header78">

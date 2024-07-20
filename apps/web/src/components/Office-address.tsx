@@ -1,10 +1,23 @@
 "use client";
 
 import React from 'react'
-
 import PropTypes from 'prop-types'
 
-const OfficeAddress = (props) => {
+interface OfficeAddressProps {
+  content1: string
+  location2ImageAlt: string
+  location1Description: string
+  location2ImageSrc: string
+  location2: string
+  location1ImageAlt: string
+  location1: string
+  heading1: string
+  location1ImageSrc: string
+  location2Description: string
+}
+
+
+const OfficeAddress = (props: OfficeAddressProps) => {
   return (
     <>
       <div className="office-address-container thq-section-padding">

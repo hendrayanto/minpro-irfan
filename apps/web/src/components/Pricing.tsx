@@ -1,10 +1,20 @@
 "use client";
 
 import React, { useState } from 'react'
-
 import PropTypes from 'prop-types'
 
-const Pricing = (props) => {
+interface PricingProps {
+  feature1: string
+  buyTicket: string
+  feature2: string
+  feature4: string
+  feature3: string
+  plan: string
+  price: string
+  feature5: string
+}
+
+const Pricing = (props: PricingProps) => {
   const [isMonthly, setIsMonthly] = useState(true)
   return (
     <>

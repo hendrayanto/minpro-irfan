@@ -1,10 +1,22 @@
 "use client";
 
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Link from 'next/link';
 
-import PropTypes from 'prop-types'
+interface FooterProps {
+  link1: string;
+  termsLink: string;
+  link3: string;
+  privacyLink: string;
+  link4: string;
+  cookiesLink: string;
+  link5: string;
+  link2: string;
+  logoAlt: string;
+}
 
-const Footer = (props) => {
+const Footer = (props: FooterProps) => {
   return (
     <>
       <footer className="footer-footer7 thq-section-padding">
@@ -13,10 +25,16 @@ const Footer = (props) => {
             <div className="footer-logo"></div>
             <div className="footer-links">
               <span className="thq-body-small">{props.link1}</span>
-              <span className="thq-body-small">{props.link2}</span>
-              <span className="thq-body-small">{props.link3}</span>
+              <Link href="/create-event" legacyBehavior>
+                <a className="thq-body-small">{props.link2}</a>
+              </Link>
+              <Link href="/AboutUs" legacyBehavior>
+                <a className="thq-body-small">{props.link3}</a>
+              </Link>
               <span className="thq-body-small">{props.link4}</span>
-              <span className="thq-body-small">{props.link5}</span>
+              <Link href="/ContactUs" legacyBehavior>
+                <a className="thq-body-small">{props.link5}</a>
+              </Link>
             </div>
           </div>
           <div className="footer-credits">
@@ -26,11 +44,15 @@ const Footer = (props) => {
                 <span className="thq-body-small">2024 Musical Party</span>
               </div>
               <div className="footer-footer-links">
-                <span className="footer-text6 thq-body-small">
-                  {props.privacyLink}
-                </span>
-                <span className="thq-body-small">{props.termsLink}</span>
-                <span className="thq-body-small">{props.cookiesLink}</span>
+                <Link href="/Policy" legacyBehavior>
+                  <a className="footer-text6 thq-body-small">{props.privacyLink}</a>
+                </Link>
+                <Link href="/TermConditions" legacyBehavior>
+                  <a className="thq-body-small">{props.termsLink}</a>
+                </Link>
+                <Link href="/Cookies" legacyBehavior>
+                  <a className="thq-body-small">{props.cookiesLink}</a>
+                </Link>
               </div>
             </div>
           </div>
@@ -125,7 +147,7 @@ const Footer = (props) => {
         `}
       </style>
     </>
-  )
+  );
 }
 
 Footer.defaultProps = {
@@ -133,25 +155,22 @@ Footer.defaultProps = {
   termsLink: 'Terms and Conditions',
   link3: 'About Us',
   privacyLink: 'Privacy Policy',
-  logoSrc: 'https://presentation-website-assets.teleporthq.io/logos/logo.png',
   link4: 'Search Events',
   cookiesLink: 'Cookies Policy',
   link5: 'Contact Us',
   link2: 'Create Event',
-  logoAlt: 'Music Concert Agency Logo',
-}
+};
 
 Footer.propTypes = {
   link1: PropTypes.string,
   termsLink: PropTypes.string,
   link3: PropTypes.string,
   privacyLink: PropTypes.string,
-  logoSrc: PropTypes.string,
   link4: PropTypes.string,
   cookiesLink: PropTypes.string,
   link5: PropTypes.string,
   link2: PropTypes.string,
   logoAlt: PropTypes.string,
-}
+};
 
-export default Footer
+export default Footer;

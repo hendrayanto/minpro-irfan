@@ -1,10 +1,14 @@
 "use client";
 
 import React from 'react'
-
 import PropTypes from 'prop-types'
 
-const FeatureExplore = (props) => {
+interface FeatureExploreProps {
+  content1: string
+  heading1: string
+} 
+
+const FeatureExplore = (props: FeatureExploreProps) => {
   return (
     <>
       <div className="thq-section-padding">

@@ -2,9 +2,24 @@
 
 import React, { useState } from 'react'
 import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
+import Link from 'next/link'
 
-const Features2 = (props) => {
+interface Features2Props {
+  feature2ImgSrc: string
+  featureBrowseEvents: string
+  descriptionCreateEvents: string
+  feature3ImgAlt: string
+  createEvents: string
+  searchEventsLocation: string
+  feature1Description: string
+  feature3ImgSrc: string
+  feature3Description: string
+  feature1ImgAlt: string
+  feature2ImgAlt: string
+  feature1ImgSrc: string
+}
+
+const Features2 = (props: Features2Props) => {
   const [activeTab, setActiveTab] = useState(0)
   return (
     <>
@@ -37,16 +52,15 @@ const Features2 = (props) => {
                 )}
               </div>
               <div className="features2-content1">
-                <h2 className="thq-heading-2">{props.createEvents}</h2>
+                <h2 className="thq-heading-2">
+                  <Link href="/create-event" className="create-events-link">
+                    {props.createEvents}
+                  </Link>
+                </h2>
                 <span className="thq-body-small">
                   {props.descriptionCreateEvents}
                 </span>
               </div>
-              <div className="create-your-own-events">
-        <Link to="/create-event" className="create-events-link">
-          Create Your Own Events
-        </Link>
-      </div>
             </div>
             <div
               onClick={() => setActiveTab(2)}
